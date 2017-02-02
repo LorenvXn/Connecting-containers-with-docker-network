@@ -46,3 +46,8 @@ int main(int argc, char **argv)
 
 close $fh;
 
+
+###################################################
+# Script based on http://zetcode.com/db/mysqlc/
+###################################################
+
