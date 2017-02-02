@@ -21,3 +21,6 @@ From ``C_server`` folder: <br \>
 4) find container's ID and execute. You should already find the compiled program under /home directory. <br \>
 Run it and then check databases on the mysql container. A new database `` testdb `` should be created.<br \>
 
+
+
+> You could make this faster, if implementing the gcc compilation and assigning shift value to $var in the Perl script..etc... 
