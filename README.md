@@ -16,7 +16,7 @@ From ``C_server`` folder: <br \>
 
 1) Run ``test.pl`` script. This will find the name of mysql_new image, and update/recreate the ``create.c`` file. <br \> 
 2) `` docker build --tag="manipulatedb" . `` <br \>
-3) docker run -it -d -p 8091:8091 --link <Container name>:<Container name>  manipulatedb bash <br \>
+3) docker run -it -d -p 8091:8091 --link [Container name]:[Container name]  manipulatedb bash <br \>
 (for instance `` docker run -it -d -p 8091:8091 --link hardcore_goldstine:hardcore_goldstine manipulatedb bash`` ) <br \>
 4) find container's ID and execute. You should already find the compiled program under /home directory. <br \>
 Run it and then check databases on the mysql container. A new database `` testdb `` should be created.<br \>
