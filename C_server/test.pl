@@ -5,7 +5,7 @@ use strict;
 my $filename = 'create.c';
 open(my $fh, '>', 'create.c');
 
-chomp(my $var =`/bin/bash /root/dockerZ/C_dockerZ/testish/scriptish.sh`);
+chomp(my $var =`/bin/bash scriptish.sh`);
 
 
 print $fh "
