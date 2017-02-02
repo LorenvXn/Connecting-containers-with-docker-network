@@ -1,6 +1,6 @@
 # Linking-docker-containers
 
-Linking mysql container with a C container for C API mysql programming purposes. 
+Linking mysql container with a C container for C API mysql programming purposes.  -- The container with ``manipulatedb`` will behave as the connection server for the mysql database.
 
 Building:
 
@@ -23,4 +23,4 @@ Run it and then check databases on the mysql container. A new database `` testdb
 
 
 
-> You could make this faster, if implementing the gcc compilation and assigning shift value to $var in the Perl script..etc... 
+> For getting rid of bash script, you could implement the gcc compilation and assigning shift value to $var in the Perl script..etc... 
