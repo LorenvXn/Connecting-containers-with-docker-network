@@ -40,8 +40,6 @@ root@server# docker exec -ti 4764499f46cd /bin/bash `` <br \>
 
 2) `` docker build -t manipulatedb . `` <br \>
 
-3.2) Check if you can ping one from another <br \>
-
 (yup, it *definitely* needs more automation) <br \>
 
 4) ``docker run -it -d -p 8091:8091  manipulatedb /bin/bash ``   <br \>
@@ -51,9 +49,15 @@ root@server# docker exec -ti 4764499f46cd /bin/bash `` <br \>
 bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat <br \>
 4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton `` <br \> 
 
+4.1) Add new created container to the new moar-network bridge: <br \>
+
+``docker network connect moar-network  bc0333ec8b1d ``  <br \>
+
+4.2) Access container:  <br \>
 
 `` root@server# docker exec -ti bc0333ec8b1d /bin/bash`` <br \>
 ``root@bc0333ec8b1d:/home#`` <br \>
+
 
 5) Under /home, run the already compiled C program:  <br \>
 
