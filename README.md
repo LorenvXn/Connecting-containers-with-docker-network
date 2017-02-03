@@ -25,14 +25,14 @@ root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker exec -ti 4764
 4) Create new dba user, as per indication in ``db_user_creation.txt``<br \>
 
 
-> Docker-network creation:
+> Docker-network creation: <br \>
 
-1) Create new bridge:  ``docker network create --driver=bridge [new bridge name]``
- ``docker network create --driver=bridge moar-network``
-2) Add new container to new network:
-``docker network connect moar-network [container's ID with mysql_new image]``
+1) Create new bridge:  ``docker network create --driver=bridge [new bridge name]`` <br \>
+ ``docker network create --driver=bridge moar-network`` <br \>
+2) Add new container to new network: <br \>
+``docker network connect moar-network [container's ID with mysql_new image]`` <br \>
 
- ``docker network connect moar-network  4764499f46cd`` 
+ ``docker network connect moar-network  4764499f46cd``  <br \>
 
 > From ``C_server`` folder: <br \>
 
@@ -40,19 +40,20 @@ root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker exec -ti 4764
 
 2) `` docker build -t manipulatedb . `` <br \>
 
-3.2) Check if you can ping one from another
+3.2) Check if you can ping one from another <br \>
 
-(yup, it *definitely* needs more automation)
+(yup, it *definitely* needs more automation) <br \>
 
 4) ``docker run -it -d -p 8091:8091  manipulatedb /bin/bash ``   <br \>
 
 ``  #docker ps -a `` <br \>
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+`` CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
 bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat <br \>
-4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton <br \> 
+4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton `` <br \> 
 
-`` root@server# docker exec -ti bc0333ec8b1d /bin/bash``
-``root@bc0333ec8b1d:/home#`` 
+
+`` root@server# docker exec -ti bc0333ec8b1d /bin/bash`` <br \>
+``root@bc0333ec8b1d:/home#`` <br \>
 
 5) Under /home, run the already compiled C program:  <br \>
 
@@ -62,9 +63,9 @@ bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago  
 ``root@bc0333ec8b1d:/home# ``<br \>
 
 
-6) Check on container with image ``mysql_new`` if new database was created. 
+6) Check on container with image ``mysql_new`` if new database was created.  <br \>
 
-root@server# ``docker exec xenodochial_hamilton  mysql -uroot -pMuhaha -e  "show databases;"`` 
+root@server# ``docker exec xenodochial_hamilton  mysql -uroot -pMuhaha -e  "show databases;"``  <br \>
 mysql: [Warning] Using a password on the command line interface can be insecure.  <br \>
 Database<br \>
 information_schema<br \>
