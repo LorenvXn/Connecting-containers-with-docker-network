@@ -1,6 +1,9 @@
 #!/usr/bin/perl
 
 use strict;
+####################################################
+# Extracts mysql_new's IP and adds it in C file
+#####################################################
 
 my $filename = 'create.c';
 open(my $fh, '>', 'create.c');
