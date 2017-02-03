@@ -6,14 +6,14 @@ Building: <br \>
 
 ``!!!First of all, build mysql container!!!``
 
-*From ``db_server`` folder: <br \>
+> From ``db_server`` folder: <br \>
 
 1) ``docker build -t mysql_new . `` <br \>
 2) ``docker run -it -d -p 3306:3306 mysql_new /bin/bash `` <br \>
 
 `` root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker ps -a`` <br \>
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
-4764499f46cd        mysql_new           "docker-entrypoint..."   3 seconds ago       Up 2 seconds        3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton  <br \>
+``CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+4764499f46cd        mysql_new           "docker-entrypoint..."   3 seconds ago       Up 2 seconds        3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton``  <br \>
 
 
 3.1)  Find container's ID, and execute <br \>
@@ -25,7 +25,7 @@ root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker exec -ti 4764
 4) Create new dba user, as per indication in ``db_user_creation.txt``<br \>
 
 
-*Docker-network creation:
+> Docker-network creation:
 
 1) Create new bridge:  ``docker network create --driver=bridge [new bridge name]``
  ``docker network create --driver=bridge moar-network``
@@ -34,7 +34,7 @@ root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker exec -ti 4764
 
  ``docker network connect moar-network  4764499f46cd`` 
 
-*From ``C_server`` folder: <br \>
+> From ``C_server`` folder: <br \>
 
 1) Run ``test.pl`` script. This will find the name of mysql_new image, and update/recreate the ``create.c`` file. <br \> 
 
