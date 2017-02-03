@@ -11,7 +11,7 @@ From ``db_server`` folder: <br \>
 3) Find container's ID, and execute (for instance: ``docker exec -it 9d0a36520421 /bin/bash`` ) <br \>
 (it needds more automation at point 3... lel!)
 4) Restart mysql service (if needed): ``service mysql restart``
-5) Create new dba user, as per indication 
+5) Create new dba user, as per indication in ``db_user_creation.txt``
 
 
 From ``C_server`` folder: <br \>
