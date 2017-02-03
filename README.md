@@ -11,7 +11,7 @@ Building: <br \>
 1) ``docker build -t mysql_new . `` <br \>
 2) ``docker run -it -d -p 3306:3306 mysql_new /bin/bash `` <br \>
 
-`` root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker ps -a`` <br \>
+`` root@server# docker ps -a`` <br \>
 ``CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
 4764499f46cd        mysql_new           "docker-entrypoint..."   3 seconds ago       Up 2 seconds        3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton``  <br \>
 
@@ -19,7 +19,7 @@ Building: <br \>
 3.1)  Find container's ID, and execute <br \>
 3.2)  Restart mysql service (if needed): ``service mysql restart``<br \>
 ``
-root@tron-VirtualBox:~/dockerZ/C_dockerZ/testish/db_server# docker exec -ti 4764499f46cd /bin/bash `` <br \>
+root@server# docker exec -ti 4764499f46cd /bin/bash `` <br \>
 `` root@4764499f46cd:/# service mysql restart `` <br \>
 
 4) Create new dba user, as per indication in ``db_user_creation.txt``<br \>
