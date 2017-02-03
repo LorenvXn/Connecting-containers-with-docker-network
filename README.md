@@ -3,6 +3,7 @@
 Connecting mysql container with a C container for C API mysql programming purposes.  -- The container with ``manipulatedb`` will behave as the connection server for the mysql database.
 
 Building:
+``!!!First of all, build mysql container!!!``
 
 From ``db_server`` folder: <br \>
 
