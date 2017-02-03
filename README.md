@@ -32,12 +32,12 @@ From ``C_server`` folder: <br \>
 (yup, it needs more automation here as well)
 
 4) ``docker run -it -d -p 8091:8091  manipulatedb /bin/bash ``   <br \>
-5)  `` docker run -ti manipulatedb /bin/bash ``   <br \>
-6) Under /home, run create program:  <br \>
+
+5) Under /home, run create program:  <br \>
 ``root@0f2d2de2ba6d:/home# ./create`` <br \>
 ``root@0f2d2de2ba6d:/home#`` <br \> 
 ``root@0f2d2de2ba6d:/home#``  <br \>
 
-7) Check on container with image ``mysql_new`` if new database was created. 
+6) Check on container with image ``mysql_new`` if new database was created. 
 
 
