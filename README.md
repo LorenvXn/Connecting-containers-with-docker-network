@@ -9,9 +9,9 @@ From ``db_server`` folder: <br \>
 1) ``docker build -t mysql_new . `` <br \>
 2) ``docker run -it -d -p 3306:3306 mysql_new /bin/bash `` <br \>
 3) Find container's ID, and execute (for instance: ``docker exec -it 9d0a36520421 /bin/bash`` ) <br \>
-(it needds more automation at point 3... lel!)
-4) Restart mysql service (if needed): ``service mysql restart``
-5) Create new dba user, as per indication in ``db_user_creation.txt``
+(it needds more automation at point 3... lel!)<br \>
+4) Restart mysql service (if needed): ``service mysql restart``<br \>
+5) Create new dba user, as per indication in ``db_user_creation.txt``<br \>
 
 
 From ``C_server`` folder: <br \>
