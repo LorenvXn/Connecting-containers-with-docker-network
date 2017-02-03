@@ -58,6 +58,7 @@ close $fh;
 #          NULL, 0, NULL, 0) == NULL)
 #  [------snip---------]
 #
-# Script based on http://zetcode.com/db/mysqlc/
+# Script & project based on materials:  http://zetcode.com/db/mysqlc/ 
+# https://blog.csainty.com/2016/07/connecting-docker-containers.html
 ##################################################################################
 
