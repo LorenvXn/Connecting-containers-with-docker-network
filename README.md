@@ -46,8 +46,9 @@ root@server# docker exec -ti 4764499f46cd /bin/bash `` <br \>
 
 ``  #docker ps -a `` <br \>
 `` CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
-bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat <br \>
-4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton `` <br \> 
+bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat `` <br \>
+
+``4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton `` <br \> 
 
 4.1) Add new created container to the new moar-network bridge: <br \>
 
