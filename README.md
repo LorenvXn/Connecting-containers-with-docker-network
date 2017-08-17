@@ -66,13 +66,14 @@ root@server# docker exec -ti 4764499f46cd /bin/bash ``
 4) ``docker run -it -d -p 8091:8091  manipulatedb /bin/bash ``   
 
 
-``  #docker ps -a `` 
+```  #docker ps -a  
 
-`` CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
-bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat `` 
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat 
 
 
-``4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton ``
+4764499f46cd        mysql_new           "docker-entrypoint..."   13 minutes ago      Up 13 minutes       3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton 
+```
 
 
 4.1) Add new created container to the new moar-network bridge: 
@@ -93,13 +94,14 @@ bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago  
 5) Under /home, run the already compiled C program: 
 
 
-``root@bc0333ec8b1d:/home# ./create ``
+```root@bc0333ec8b1d:/home# ./create 
 
-``root@bc0333ec8b1d:/home# echo $?`` 
+root@bc0333ec8b1d:/home# echo $?
 
-``0 ``
+0 
 
-``root@bc0333ec8b1d:/home# ``
+root@bc0333ec8b1d:/home# 
+```
 
 
 
