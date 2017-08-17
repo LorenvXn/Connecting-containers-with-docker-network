@@ -82,7 +82,8 @@ bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago  
 
 
 ``docker network connect moar-network  bc0333ec8b1d ``  
-    un -it -d -p 8091:8091 manipulatedb /bin/bash
+   
+   docker run -it -d -p 8091:8091 manipulatedb /bin/bash
 
 
 
