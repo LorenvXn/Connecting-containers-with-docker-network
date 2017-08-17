@@ -15,10 +15,11 @@ Building:
 2) ``docker run -it -d -p 3306:3306 mysql_new /bin/bash ``
 
 
-`` root@server# docker ps -a``
+``` root@server# docker ps -a
 
-``CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
-4764499f46cd        mysql_new           "docker-entrypoint..."   3 seconds ago       Up 2 seconds        3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton``  
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+4764499f46cd        mysql_new           "docker-entrypoint..."   3 seconds ago       Up 2 seconds        3300/tcp, 0.0.0.0:3306->3306/tcp   xenodochial_hamilton
+```
 
 
 
@@ -66,7 +67,8 @@ root@server# docker exec -ti 4764499f46cd /bin/bash ``
 4) ``docker run -it -d -p 8091:8091  manipulatedb /bin/bash ``   
 
 
-```  #docker ps -a  
+```  
+#docker ps -a  
 
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
 bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago       Up 6 seconds        22/tcp, 0.0.0.0:8091->8091/tcp     upbeat_fermat 
@@ -80,6 +82,8 @@ bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago  
 
 
 ``docker network connect moar-network  bc0333ec8b1d ``  
+    un -it -d -p 8091:8091 manipulatedb /bin/bash
+
 
 
 4.2) Access container:  
@@ -108,7 +112,8 @@ root@bc0333ec8b1d:/home#
 6) Check on container with image ``mysql_new`` if new database was created.  
 
 
-root@server# ``docker exec xenodochial_hamilton  mysql -uroot -pMuhaha -e  "show databases;"``  
+```
+root@server# docker exec xenodochial_hamilton  mysql -uroot -pMuhaha -e  "show databases;"
 
 mysql: [Warning] Using a password on the command line interface can be insecure. 
 
@@ -122,5 +127,5 @@ performance_schema
 
 sys
 
-``testdb``
-
+testdb
+```
