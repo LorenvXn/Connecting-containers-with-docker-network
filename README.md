@@ -90,16 +90,19 @@ bc0333ec8b1d        manipulatedb        "/bin/bash"              7 seconds ago  
 4.2) Access container:  
 
 
-`` root@server# docker exec -ti bc0333ec8b1d /bin/bash`` 
+```
+root@server# docker exec -ti bc0333ec8b1d /bin/bash
 
-``root@bc0333ec8b1d:/home#``
+root@bc0333ec8b1d:/home#
+```
 
 
 
 5) Under /home, run the already compiled C program: 
 
 
-```root@bc0333ec8b1d:/home# ./create 
+```
+root@bc0333ec8b1d:/home# ./create 
 
 root@bc0333ec8b1d:/home# echo $?
 
